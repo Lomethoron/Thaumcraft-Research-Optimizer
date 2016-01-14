@@ -3,10 +3,15 @@ class Node:
     def __init__(self):
         self.name = ""
         self.neighbors = []
+        self.prev = ""
+        self.is_in_queue = False
 
     def __init__(self, name):
         self.name = name
         self.neighbors = []
+        self.prev = ""
+        self.is_in_queue = False
+
     def setName(self, name):
         self.name = name
 
@@ -19,3 +24,7 @@ class Node:
         for elem in self.neighbors:
             rtnstr += elem.name+" "
         return rtnstr+"\n"
+
+    def clear_path_data(self):
+        self.prev = ""
+        self.is_in_queue = False
