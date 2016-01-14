@@ -9,7 +9,7 @@ graph = Graph()
 while counter<primal_amount:
     #create Nodes
     element_name = thaum_data.readline()
-    element = Node(element_name)
+    element = Node(element_name.strip())
     graph.add_node(element)
     counter += 1
 
@@ -28,6 +28,9 @@ while counter<constructed_amount:
     #first node
     does_elem_1_exist = False
     for elem in graph.nodes:
+        print("Elem name: "+elem.name)
+        print("Elem1 name: "+element_builder_name_1)
+        print("is equal:"+str(elem.name == element_builder_name_1)+"\n")
         if(elem.name == element_builder_name_1):
             does_elem_1_exist = True
             elem.add_neighbors([element])
@@ -41,6 +44,9 @@ while counter<constructed_amount:
     #second node
     does_elem_2_exist = False
     for elem in graph.nodes:
+        print("Elem name: "+elem.name)
+        print("Elem1 name: "+element_builder_name_2)
+        print("is equal:"+str(elem.name == element_builder_name_2)+"\n")
         if(elem.name == element_builder_name_2):
             does_elem_2_exist = True
             elem.add_neighbors([element])
@@ -51,6 +57,5 @@ while counter<constructed_amount:
         element.add_neighbors([element_2])
         graph.add_node(element_2)
     counter += 1
-graph.print_nodes()
 thaum_data.close()
 print "Closing file"
