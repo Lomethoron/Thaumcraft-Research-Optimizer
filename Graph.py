@@ -2,10 +2,10 @@ class Graph:
     def __init__(self):
         self.nodes = []
 
-    def addNode(self, node):
+    def add_node(self, node):
         self.nodes.append(node)
 
-    def findShortestPath(self, start, end):
+    def find_shortest_path(self, start, end):
         foo = 6
 
     def print_nodes(self):

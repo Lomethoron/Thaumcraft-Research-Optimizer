@@ -15,7 +15,7 @@ class Node:
             self.neighbors.append(elem)
 
     def __str__(self):
-        rtnstr = "Node: "+self.name+"Edges: "
+        rtnstr = "Node: "+self.name+"\nEdges: "
         for elem in self.neighbors:
             rtnstr += elem.name+" "
         return rtnstr+"\n"
